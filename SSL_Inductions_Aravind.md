@@ -20,8 +20,10 @@
 
 
 ![enter image description here](https://i.ibb.co/jfhbvNR/Screenshot-from-2024-06-25-00-24-39.png)
--   Next open the 20auto-upgrades, and add the following lines(Here ‘7’ means it will automatically upgrade every seven days, you can set your own value)-
--![enter image description here](https://i.ibb.co/Vpk6zFb/Screenshot-from-2024-06-25-00-26-54.png)
+-   Next open the 20auto-upgrades, and add the following lines(Here ‘7’ means it will automatically upgrade every seven days, you can set your own value)
+
+![enter image description here](https://i.ibb.co/Vpk6zFb/Screenshot-from-2024-06-25-00-26-54.png)
+
 
 Just run `‘sudo systemctl status restart unattended-upgrades.service’` to update the new configurations.
 
@@ -134,6 +136,7 @@ Just run `‘sudo systemctl status restart unattended-upgrades.service’` to up
  -   Now to automate the script, use crontab as the examadmin using-
     -   `sudo crontab -u examadmin -e` to open the crontab and select the editor you want to use.
     -   Now add a line at the end according to the time you want to run the file.   ![enter image description here](https://i.ibb.co/bdtwqK7/Screenshot-from-2024-06-26-01-09-36.png)
+   
     -   Here the syntax is -
 	    -   m -minute
 	    -   h -hour
@@ -304,5 +307,5 @@ This ensures that the script runs daily at 12:00 am.
   
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5NzMwMDQxNjQsMTQ0MTU0MTI0OV19
+eyJoaXN0b3J5IjpbLTE4OTMwNjk5NDgsMTQ0MTU0MTI0OV19
 -->
