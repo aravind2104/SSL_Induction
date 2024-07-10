@@ -138,7 +138,8 @@ Just run `‘sudo systemctl status restart unattended-upgrades.service’` to up
  -   Now to automate the script, use crontab as the examadmin using-
     -   `sudo crontab -u examadmin -e` to open the crontab and select the editor you want to use.
     -   Now add a line at the end according to the time you want to run the file.   
-     ![enter image description here](https://i.ibb.co/bdtwqK7/Screenshot-from-2024-06-26-01-09-36.png)
+    ![enter image description here](https://i.ibb.co/bdtwqK7/Screenshot-from-2024-06-26-01-09-36.png)
+   
    
     -   Here the syntax is -
 	    -   m -minute
@@ -168,6 +169,7 @@ Just run `‘sudo systemctl status restart unattended-upgrades.service’` to up
 	 - Just verify the sha256 checksum using, `sha256sum -c app1.sha256.sig`, it would give output as app1:OK on your terminal if its been successfully downloaded.
 	 - Next to make it executable, `chmod +x app1`
 	 - Run the app using `./app1` and it will show this on your terminal.
+	 
 	 ![enter image description here](https://i.ibb.co/B3MsJ5g/Screenshot-from-2024-07-10-18-12-21.png)
 
  - For APP2:
@@ -175,8 +177,7 @@ Just run `‘sudo systemctl status restart unattended-upgrades.service’` to up
 	 - First clone the repository using `git clone https://gitlab.com/tellmeY/issslopen`
 	 - Even though it's said that we can use either bun or docker, but I recommend using docker as I found it more convenient. So, make sure to install docker and docker-compose.
 	 - Next, make sure you are in the issslopen directory, and make a copy of the .env.example file using `cp .env.example .env`
-	 - Next make sure to edit the ADMINS variable and add two tokens for users.
-		 ![enter image description here](https://i.ibb.co/HpwLPch/Screenshot-from-2024-07-10-18-58-36.png)
+	 - Next make sure to edit the ADMINS variable and add two tokens for users.		 	 ![enter image description here](https://i.ibb.co/HpwLPch/Screenshot-from-2024-07-10-18-58-36.png)
 
 	 - Next run the application using `docker-compose up -d`
 	 - You can update the image use `docker-compose pull`
@@ -310,5 +311,5 @@ This ensures that the script runs daily at 12:00 am.
   
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5NTQwNjE1MDYsMTQ0MTU0MTI0OV19
+eyJoaXN0b3J5IjpbLTgwNDQ4MzMzNCwxNDQxNTQxMjQ5XX0=
 -->
