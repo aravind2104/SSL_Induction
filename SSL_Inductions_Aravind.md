@@ -73,7 +73,9 @@ Just run `‘sudo systemctl status restart unattended-upgrades.service’` to up
  -   Install it using – `sudo apt-get install libpam-google-authenticator`
  -   Open the `/etc/pam.d/sshd` using a editor and add the following line at the end--![enter image description here](https://i.ibb.co/HCDfBJy/Screenshot-from-2024-06-25-02-15-10.png)
  -   Now we have to configure SSH also to allow MFA, open the `/etc/ssh/sshd_config` using an editor and change the following configs-
-  ![enter image description here](https://i.ibb.co/93t20Zs/Screenshot-from-2024-06-25-02-18-28.png)![enter image description here](https://i.ibb.co/BcLFmm1/Screenshot-from-2024-06-25-02-19-12.png)
+
+  ![enter image description here](https://i.ibb.co/93t20Zs/Screenshot-from-2024-06-25-02-18-28.png)
+  ![enter image description here](https://i.ibb.co/BcLFmm1/Screenshot-from-2024-06-25-02-19-12.png)
  - Now restart ssh using `sudo systemctl restart ssh`
  - Now run the command `google-authenticator` and scan the qr code on your authenticator app, to set up MFA.
 
@@ -135,7 +137,8 @@ Just run `‘sudo systemctl status restart unattended-upgrades.service’` to up
     -   Also make sure that the backup directory is already created, and its permissions and owners are set accordingly. If not run the commands `sudo chmod 700 backup_dir` and `sudo chown examadmin:examadmin backup_dir`.
  -   Now to automate the script, use crontab as the examadmin using-
     -   `sudo crontab -u examadmin -e` to open the crontab and select the editor you want to use.
-    -   Now add a line at the end according to the time you want to run the file.   ![enter image description here](https://i.ibb.co/bdtwqK7/Screenshot-from-2024-06-26-01-09-36.png)
+    -   Now add a line at the end according to the time you want to run the file.   
+     ![enter image description here](https://i.ibb.co/bdtwqK7/Screenshot-from-2024-06-26-01-09-36.png)
    
     -   Here the syntax is -
 	    -   m -minute
@@ -307,5 +310,5 @@ This ensures that the script runs daily at 12:00 am.
   
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4OTMwNjk5NDgsMTQ0MTU0MTI0OV19
+eyJoaXN0b3J5IjpbLTE5NTQwNjE1MDYsMTQ0MTU0MTI0OV19
 -->
