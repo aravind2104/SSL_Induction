@@ -70,7 +70,8 @@ Just run `‘sudo systemctl status restart unattended-upgrades.service’` to up
 **GOOGLE AUTHENTICATOR:**
  -   Install it using – `sudo apt-get install libpam-google-authenticator`
  -   Open the `/etc/pam.d/sshd` using a editor and add the following line at the end--![enter image description here](https://i.ibb.co/HCDfBJy/Screenshot-from-2024-06-25-02-15-10.png)
- -   Now we have to configure SSH also to allow MFA, open the `/etc/ssh/sshd_config` using an editor and change the following configs-![enter image description here](https://i.ibb.co/93t20Zs/Screenshot-from-2024-06-25-02-18-28.png)![enter image description here](https://i.ibb.co/BcLFmm1/Screenshot-from-2024-06-25-02-19-12.png)
+ -   Now we have to configure SSH also to allow MFA, open the `/etc/ssh/sshd_config` using an editor and change the following configs-
+  ![enter image description here](https://i.ibb.co/93t20Zs/Screenshot-from-2024-06-25-02-18-28.png)![enter image description here](https://i.ibb.co/BcLFmm1/Screenshot-from-2024-06-25-02-19-12.png)
  - Now restart ssh using `sudo systemctl restart ssh`
  - Now run the command `google-authenticator` and scan the qr code on your authenticator app, to set up MFA.
 
@@ -113,8 +114,11 @@ Just run `‘sudo systemctl status restart unattended-upgrades.service’` to up
     -   `sudo chmod 700 /home/username`
     -   Run this command for every user you have.
     -   Verify this by running the commmand `ls -l`. The image below shows that the directory is only accessible for read,write and execute for the owner, and none for the other users in same groups or other users.
-    ![enter image description here](https://i.ibb.co/K2xpDqG/Screenshot-from-2024-06-26-00-45-35.png)
-    -   The plus in front of the exam_users also suggest that they are read-accessible by the examaudit.
+
+        ![enter image description here](https://i.ibb.co/K2xpDqG/Screenshot-from-2024-06-26-00-45-35.png) 
+          
+
+-   The plus in front of the exam_users also suggest that they are read-accessible by the examaudit.
     
  -   Now create a backup script according to what you want to name it, probably in `/usr/local/bin` directory.
  -   To make sure that only examadmin can run the script,
@@ -300,5 +304,5 @@ This ensures that the script runs daily at 12:00 am.
   
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzg3NTg1MTg0LDE0NDE1NDEyNDldfQ==
+eyJoaXN0b3J5IjpbLTE5NzMwMDQxNjQsMTQ0MTU0MTI0OV19
 -->
