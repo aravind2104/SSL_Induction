@@ -10,13 +10,16 @@
 -   If you instead opted for ssh key pair, then the private key will be downloaded in your system and the public key will be already present in the .ssh file of your vm user. Use `ssh -i /path_to_private.key [username@ipaddress]` to log in.
 -   You can maybe create a config file in the .ssh directory of your system to automate things,
     do `sudo nano .ssh/config` and edit as follow- after which you can log in to your vm using `ssh name`
-    ![Adding a host to your config file](https://i.ibb.co/tKxZc1w/Screenshot-from-2024-06-25-00-17-29.png)
+   
+   ![Adding a host to your config file](https://i.ibb.co/tKxZc1w/Screenshot-from-2024-06-25-00-17-29.png)
  -   Make sure to update the system packages after accessing your VM. Use the following commands -
 	    -   `sudo apt update`
 	    -   `sudo apt upgrade`
 -   Now, for unattended-upgrades, install it using `sudo apt install unattended-upgrades`. Now use a text editor of your choice to edit the file `‘/etc/apt/apt.conf.d/50unattended-upgrades’` and uncomment the lines given below.
 	  	 
-	![enter image description here](https://i.ibb.co/jfhbvNR/Screenshot-from-2024-06-25-00-24-39.png)
+
+
+![enter image description here](https://i.ibb.co/jfhbvNR/Screenshot-from-2024-06-25-00-24-39.png)
 -   Next open the 20auto-upgrades, and add the following lines(Here ‘7’ means it will automatically upgrade every seven days, you can set your own value)-
 -![enter image description here](https://i.ibb.co/Vpk6zFb/Screenshot-from-2024-06-25-00-26-54.png)
 
@@ -25,7 +28,9 @@ Just run `‘sudo systemctl status restart unattended-upgrades.service’` to up
 **2.Enhanced SSH Security**
 
  -   To achieve things like disabling root login and password authentication you have to open the `/etc/ssh/sshd_config` file and change the following lines.
+ 
 ![enter image description here](https://i.ibb.co/kH7sjx7/Screenshot-from-2024-06-25-00-50-35.png)
+
 ![enter image description here](https://i.ibb.co/wW8PCMj/Screenshot-from-2024-06-25-00-51-00.png)
   
 
@@ -292,5 +297,5 @@ This ensures that the script runs daily at 12:00 am.
   
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQ0MTU0MTI0OV19
+eyJoaXN0b3J5IjpbMTMwNTU2MTYxNSwxNDQxNTQxMjQ5XX0=
 -->
