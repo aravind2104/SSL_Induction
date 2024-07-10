@@ -9,9 +9,8 @@
 -   Open your terminal and type the command – `ssh [username@ipaddress]`, afterwards enter the password, and enter your vm
 -   If you instead opted for ssh key pair, then the private key will be downloaded in your system and the public key will be already present in the .ssh file of your vm user. Use `ssh -i /path_to_private.key [username@ipaddress]` to log in.
 -   You can maybe create a config file in the .ssh directory of your system to automate things,
-    do `sudo nano .ssh/config` and edit as follow- after which you can log in to your vm using `ssh name`
-   
-   ![Adding a host to your config file](https://i.ibb.co/tKxZc1w/Screenshot-from-2024-06-25-00-17-29.png)
+    do `sudo nano .ssh/config` and edit as follow- after which you can log in to your vm using `ssh name`   
+  ![Adding a host to your config file](https://i.ibb.co/tKxZc1w/Screenshot-from-2024-06-25-00-17-29.png)
  -   Make sure to update the system packages after accessing your VM. Use the following commands -
 	    -   `sudo apt update`
 	    -   `sudo apt upgrade`
@@ -243,6 +242,7 @@ Just run `‘sudo systemctl status restart unattended-upgrades.service’` to up
 	 - Use the `mysqldump` command shown in the script, which would transfer the contents of the database to the backup file that we specified.
 	 - Also make this script executable using the command `sudo chmod +x 'path to script'`
 	 - Next to automate the backup process, open a Crontab with `crontab -e` and add a command like we used for the exam user backup script.
+	
 ![enter image description here](https://i.ibb.co/MkKTGmh/Screenshot-from-2024-06-29-05-51-59.png)
 This ensures that the script runs daily at 12:00 am.
 
@@ -311,5 +311,5 @@ This ensures that the script runs daily at 12:00 am.
   
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTgwNDQ4MzMzNCwxNDQxNTQxMjQ5XX0=
+eyJoaXN0b3J5IjpbLTEzNDAyMzA0OCwxNDQxNTQxMjQ5XX0=
 -->
