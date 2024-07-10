@@ -56,11 +56,14 @@ Just run `‘sudo systemctl status restart unattended-upgrades.service’` to up
         
  -   Open the jail.local using a text editor-
     
-    -   You will be able to see some sections with some defined rules.
+	    -   You will be able to see some sections with some defined rules.
         
-    -   You need to find the sshd section and add these configs-
-    -![enter image description here](https://i.ibb.co/g4K5f6W/Screenshot-from-2024-06-25-01-53-38.png)
-    -   Restart the fail2ban service using `sudo systemctl restart fail2ban`
+	    -   You need to find the sshd section and add these configs-
+  
+  ![enter image description here](https://i.ibb.co/g4K5f6W/Screenshot-from-2024-06-25-01-53-38.png)
+  
+	    
+- Restart the fail2ban service using `sudo systemctl restart fail2ban`
     
  -   To give access to the remote user, copy the contents of the publickey provided and add it to the authorized_keys file in the .ssh directory of a user with sudo privileges.
 
@@ -297,5 +300,5 @@ This ensures that the script runs daily at 12:00 am.
   
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTMwNTU2MTYxNSwxNDQxNTQxMjQ5XX0=
+eyJoaXN0b3J5IjpbMzg3NTg1MTg0LDE0NDE1NDEyNDldfQ==
 -->
